@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.arynd.gastosemanal.PrimaryController"
+            prefWidth="520" prefHeight="340">
+
+    <children>
+
+        <VBox layoutX="20" layoutY="25" spacing="16">
+
+            <Label text="Alimentación"/>
+            <Label text="Refrigerios"/>
+            <Label text="Transporte"/>
+            <Label text="Telefonía"/>
+            <Label text="Otros"/>
+
+        </VBox>
+
+        <VBox layoutX="140" layoutY="20" spacing="8">
+
+            <TextField fx:id="txtAlimentacion"
+                       prefWidth="120"
+                       alignment="CENTER_RIGHT"/>
+
+            <TextField fx:id="txtRefrigerios"
+                       alignment="CENTER_RIGHT"/>
+
+            <TextField fx:id="txtTransporte"
+                       alignment="CENTER_RIGHT"/>
+
+            <TextField fx:id="txtTelefonia"
+                       alignment="CENTER_RIGHT"/>
+
+            <TextField fx:id="txtOtros"
+                       alignment="CENTER_RIGHT"/>
+
+        </VBox>
+
+        <Label text="Estadísticas"
+               layoutX="310" layoutY="25"
+               style="-fx-font-weight: bold;"/>
+
+        <Label text="Total semanal"
+               layoutX="310" layoutY="65"/>
+
+        <TextField fx:id="txtTotal"
+                   layoutX="310" layoutY="90"
+                   prefWidth="150"
+                   editable="false"
+                   alignment="CENTER_RIGHT"/>
+
+        <Label text="Gasto más alto"
+               layoutX="310" layoutY="145"/>
+
+        <TextField fx:id="txtMayor"
+                   layoutX="310" layoutY="170"
+                   prefWidth="150"
+                   editable="false"/>
+
+        <Button text="Calcular estadísticas"
+                layoutX="20" layoutY="250"
+                prefWidth="150"
+                prefHeight="45"
+                wrapText="true"
+                onAction="#calcular"/>
+
+        <Button text="Limpiar"
+                layoutX="185" layoutY="250"
+                prefWidth="120"
+                prefHeight="45"
+                onAction="#limpiar"/>
+
+    </children>
+
+</AnchorPane>

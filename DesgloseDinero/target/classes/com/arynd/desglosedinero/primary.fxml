@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.arynd.desglosedinero.PrimaryController"
+            prefHeight="370.0"
+            prefWidth="530.0">
+
+    <children>
+
+        <Label text="Dinero:"
+               layoutX="25"
+               layoutY="35"/>
+
+        <TextField fx:id="txtDinero"
+                   layoutX="125"
+                   layoutY="30"
+                   prefWidth="160"
+                   alignment="CENTER_RIGHT"/>
+
+        <Button text="X"
+                layoutX="295"
+                layoutY="30"
+                prefWidth="40"
+                onAction="#limpiar"/>
+
+        <Button text="Desglosar"
+                layoutX="365"
+                layoutY="30"
+                prefWidth="130"
+                onAction="#desglosar"/>
+
+        <HBox layoutX="25"
+              layoutY="85"
+              spacing="35">
+
+            <children>
+
+                <VBox spacing="8"
+                      alignment="CENTER_RIGHT"
+                      prefWidth="220"
+                      style="-fx-border-color: gray; -fx-padding: 12;">
+
+                    <children>
+                        <Label text="Billetes de $500"/>
+                        <Label text="Billetes de $200"/>
+                        <Label text="Billetes de $100"/>
+                        <Label text="Billetes de $50"/>
+                        <Label text="Billetes de $20"/>
+                        <Label text="Monedas de $10"/>
+                        <Label text="Monedas de $5"/>
+                        <Label text="Monedas de $2"/>
+                        <Label text="Monedas de $1"/>
+                    </children>
+
+                </VBox>
+
+                <VBox spacing="8"
+                      alignment="CENTER_LEFT"
+                      prefWidth="210"
+                      style="-fx-border-color: gray; -fx-padding: 12;">
+
+                    <children>
+                        <Label fx:id="lbl500" text="0"/>
+                        <Label fx:id="lbl200" text="0"/>
+                        <Label fx:id="lbl100" text="0"/>
+                        <Label fx:id="lbl50" text="0"/>
+                        <Label fx:id="lbl20" text="0"/>
+                        <Label fx:id="lbl10" text="0"/>
+                        <Label fx:id="lbl5" text="0"/>
+                        <Label fx:id="lbl2" text="0"/>
+                        <Label fx:id="lbl1" text="0"/>
+                    </children>
+
+                </VBox>
+
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>

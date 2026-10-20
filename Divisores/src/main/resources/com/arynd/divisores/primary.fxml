@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.arynd.divisores.PrimaryController"
+            prefWidth="650" prefHeight="370">
+
+    <children>
+
+        <Label text="Ingrese un número"
+               layoutX="20" layoutY="30"/>
+
+        <TextField fx:id="txtNumero"
+                   layoutX="150" layoutY="25"
+                   prefWidth="160"/>
+
+        <Button text="Analizar"
+                layoutX="370" layoutY="25"
+                prefWidth="110"
+                onAction="#analizar"/>
+
+        <Button text="Limpiar"
+                layoutX="490" layoutY="25"
+                prefWidth="110"
+                onAction="#limpiar"/>
+
+        <VBox layoutX="20" layoutY="110" spacing="15">
+            <Label text="Cantidad de cifras"/>
+            <Label text="Suma de cifras impares"/>
+            <Label text="Suma de cifras pares"/>
+            <Label text="Suma total de cifras"/>
+            <Label text="Cifra mayor"/>
+            <Label text="Cifra menor"/>
+        </VBox>
+
+        <VBox layoutX="200" layoutY="105" spacing="5">
+
+            <TextField fx:id="txtCantidad"
+                       prefWidth="120" editable="false"/>
+
+            <TextField fx:id="txtImpares"
+                       editable="false"/>
+
+            <TextField fx:id="txtPares"
+                       editable="false"/>
+
+            <TextField fx:id="txtSuma"
+                       editable="false"/>
+
+            <TextField fx:id="txtMayor"
+                       editable="false"/>
+
+            <TextField fx:id="txtMenor"
+                       editable="false"/>
+
+        </VBox>
+
+        <Label text="Divisores"
+               layoutX="380" layoutY="105"/>
+
+        <TextArea fx:id="txtDivisores"
+                  layoutX="380" layoutY="130"
+                  prefWidth="220" prefHeight="200"
+                  editable="false"/>
+
+    </children>
+
+</AnchorPane>
